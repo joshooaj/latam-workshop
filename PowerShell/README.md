@@ -1,5 +1,14 @@
 # PowerShell
 
+## Shell-managed XProtect
+
+There is an incomplete "manifesto" for a [shell-managed XProtect](https://shell.webredirect.org/) published on an internal server and
+accessible at [shell.webredirect.org](https://shell.webredirect.org/).
+
+You'll need to be on VPN to access the page. I think it does a good job
+communicating why I'm passionate about being able to manage our
+software from a command-line. In order for Milestone, and our customers, to scale, we need to be able to automate _everything_.
+
 ## MilestonePSTools Module
 
 The documentation is online at [www.MilestonePSTools.com](https://www.milestonepstools.com)
