@@ -1,5 +1,21 @@
 # Certificates
 
+## Public Key Cryptography
+
+Certificates can be thought of as a standard container or format for sharing
+a public key, information about the owner of the certificate, and how that
+certificate is intended to be used.
+
+The public key is part of a public/private key pair. The private key is kept
+secret, and the corresponding public key can be shared freely. The private key
+is used to decrypt data that was encrypted using the public key, or to "sign" a
+message to prove that the message was sent by the owner of the private key.
+
+The public key is used to decrypt signatures made using the private key, or to
+encrypt data such that only the owner of the private key can decrypt it.
+
+Read more about [Public-key Cryptogrpahy](https://en.wikipedia.org/wiki/Public-key_cryptography).
+
 ## Terminology
 
 This is by no means a complete, or even a thorough list of the abbreviations and
@@ -37,8 +53,16 @@ servers and enabling/disabling encryption is centralized here.
 
 ## Steps to setup encryption using custom DNS name
 
+There's a forum thread on our support community where a customer wanted to
+enable encryption using a Let's Encrypt wildcard certificate. While investigating
+the issue I discovered the existence of the "BackConnectionHostNames" registry
+key and a few other potential roadblocks, and I shared a couple of scripts to help
+set/update the registry key and discussed the issue and solution in detail.
+
+[Securing Existing XProtect 2022 R1 Installation](https://supportcommunity.milestonesys.com/s/question/0D53X0000A7RkgPSQS/securing-existing-xprotect-2022r1-installation)
+
 These are all the steps I had to follow to get encryption working using a custom
-DNS name that did not match the server. The server is Windows Server 2022 with
+DNS name that did not match the server after our first training session this week. The server is Windows Server 2022 with
 no domain, and the hostname is a randomly assigned AWS EC2 instance hostname.
 Milestone is installed here as an all-in-one system, and I am using a
 certificate for "joshooaj.casacam.net".
@@ -84,8 +108,3 @@ You should now have server encryption enabled using the custom DNS name with a
 self-signed certificate. There may be a couple additional clean-up tasks to make
 sure all the registered services are correct, but
 
-
-## Dynu DNS
-
-URL: [Dynu DNS](https://www.dynu.com)
-API Key: 55a344T66W6b2463c6c2db3ee345V46g
